@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Định dạng khung chứa danh sách sản phẩm */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử tự động xuống dòng khi hết chỗ */
+    gap: 20px;       /* Khoảng cách giữa các thẻ sản phẩm */
+    padding: 20px;
+}
+
+/* Định dạng từng thẻ sản phẩm */
+.product-card {
+    flex: 1 1 calc(25% - 20px); /* Tự động co giãn, chiếm khoảng 1/4 màn hình trừ đi khoảng trống */
+    min-width: 220px;           /* Chiều rộng tối thiểu để thẻ không bị ép quá nhỏ */
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease; /* Hiệu ứng chuyển động mượt mà khi di chuột */
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào thẻ */
+.product-card:hover {
+    transform: translateY(-4px);
+}
